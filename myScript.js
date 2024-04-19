@@ -18,15 +18,10 @@ const object = {
 const updateContent = (event) => {
   const targetButton = event.target;
   const clickedButtonId = targetButton.id;
-  console.log("class", clickedButtonId)
 
-  // Remove the 'active' class from all buttons
   buttons.forEach(button => button.classList.remove('smallButton_active'));
   contents.forEach(contentObj => contentObj.classList.remove('invisible'));
 
-  // Add the 'active' class to the clicked button
-  // targetButton.classList.add('active');
-  // object[clickedButtonId].classList.add('');
 
   const contentsToBeMadeInvisible = Object.entries(object).reduce((acc, [buttonId, contentObj]) => {
     if (buttonId === clickedButtonId) {
