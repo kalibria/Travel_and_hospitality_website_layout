@@ -1,0 +1,406 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('./fonts/Manrope/Manrope-VariableFont_wght.ttf') format('ttf')
+}
+
+:root {
+    --lg-padding: 80px;
+    --sm-padding: 64px;
+    --xs-padding: 50px;
+    --xxs-padding: 24px;
+    --bg-color: rgba(244, 246, 253, 1);
+    --button-color: rgba(1, 70, 254, 1);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    letter-spacing: -5%;
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.title2 {
+    font-family: "Inter", sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+
+.title3 {
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 34px;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.button {
+    padding: 20px 94px 20px 94px;
+    border-radius: 12px;
+    border:none;
+    background-color: var(--button-color);
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -1%;
+}
+
+.header {
+    height: 80px;
+}
+
+.footer {
+    height: 526px;
+}
+
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:var(--xxs-padding);
+    max-width: 769px;
+    margin: 0 auto;
+    padding-top: var(--lg-padding);
+    padding-bottom: var(--lg-padding);
+}
+
+.name__title {
+    font-weight: 900;
+    font-size: 70px;
+}
+
+.description_main {
+    font-family: 'Manrope', sans-serif!important;
+}
+
+.langSolution {
+    max-width: 769px;
+}
+
+
+.langSolution__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.langSolution__cards {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.langSolution__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:12px;
+    max-width: 400px;
+    height: 422px;
+    padding: 24px 16px 16px 16px;
+    border-radius: 32px;
+    border: 2px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+.langSolution__cardDescription {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.langSolution__cardImgWrapper {
+    width: 368px;
+    height: 245px;
+}
+
+
+.productFor__wrapper {
+    max-width: 725px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--xxs-padding);
+}
+
+.productFor__buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.smallButton {
+    padding: 16px 32px 16px 32px;
+    gap: 10px;
+    border-radius: 12px;
+    border:none;
+    background-color: rgba(244, 246, 253, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: black;
+}
+.smallButton:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--button-color);
+}
+.smallButton_active{
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--button-color);
+}
+
+
+.productFor__wrapperCard {
+    position: relative;
+    width: 1137px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+
+.productFor__card {
+    border-radius: 32px;
+    border: 2px solid rgba(0, 0, 0, 0.04);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:42px;
+    position: relative;
+    width: 100%;
+    height: 422px;
+    padding: 42px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
+
+.productFor__card_pseudo1{
+    position: absolute;
+    top:20px;
+    width: 90%;
+
+}
+
+.productFor__card_pseudo2{
+    position: absolute;
+    top:40px;
+    width: 80%;
+}
+
+.productFor__cardDescription {
+    padding-left: 10px;
+}
+
+.helpSection {
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: var(--sm-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--lg-padding);
+}
+
+.helpSection__wrapper {
+    max-width: 1248px;
+    max-height: 852px;
+    margin-top: 70px;
+
+}
+
+.helpSection__cards {
+    display: grid;
+    grid-template-columns: 295px 295px 295px;
+    column-gap: 16px;
+    row-gap: 56px;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.helpSection__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.helpSection__imgWrapper {
+    height: 70px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.helpSection__cardDescription {
+    margin-top: 14px;
+}
+
+.invisible {
+    display: none;
+}
+
+@media  screen and (max-width: 576px) {
+    .sectionWrapper{
+        padding-top: 0;
+        padding-bottom: var(--xs-padding);
+    }
+    .name__title {
+        font-size: 36px;
+    }
+
+    .button {
+        padding: 10px 14px 10px 14px;
+        border-radius: 12px;
+        border:none;
+        background-color: var(--button-color);
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .title2 {
+        font-size: 24px;
+    }
+
+    .langSolution__cards {
+        flex-direction: column;
+    }
+
+    .title3 {
+        font-size: 18px;
+    }
+
+    .langSolution__card {
+        min-width: 370px;
+        min-height: 370px;
+    }
+    .productFor__buttons {
+        flex-direction: column;
+    }
+
+    .smallButton {
+        padding: 10px 14px 10px 14px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .productFor__wrapperCard{
+        width: 100%;
+    }
+
+    .productFor__card{
+        grid-template-columns: 1fr;
+        min-height: 600px;
+    }
+
+    .helpSection__wrapper {
+        min-height: 1500px;
+    }
+
+    .helpSection__cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
+
+
+
